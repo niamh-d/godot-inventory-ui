@@ -1,0 +1,60 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[node name="UIInventory" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -640.0
+margin_top = -280.0
+margin_right = 640.0
+margin_bottom = 280.0
+
+[node name="ColorRectBackground" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 1, 1, 1, 0.164706 )
+
+[node name="HBMain" type="HBoxContainer" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 40.0
+margin_top = -240.0
+margin_right = 1280.0
+margin_bottom = 240.0
+
+[node name="ControlItemsColumn" type="Control" parent="HBMain"]
+margin_right = 560.0
+margin_bottom = 480.0
+rect_min_size = Vector2( 560, 480 )
+
+[node name="VBItemsColumn" type="VBoxContainer" parent="HBMain/ControlItemsColumn"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VSeparator" type="VSeparator" parent="HBMain"]
+margin_left = 564.0
+margin_right = 584.0
+margin_bottom = 480.0
+custom_constants/separation = 20
+custom_styles/separator = SubResource( 1 )
+
+[node name="ControlInfoColumn" type="Control" parent="HBMain"]
+margin_left = 588.0
+margin_right = 1188.0
+margin_bottom = 480.0
+rect_min_size = Vector2( 600, 480 )
+
+[node name="VBInfoColumn" type="VBoxContainer" parent="HBMain/ControlInfoColumn"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="UIItemInfo" type="Control" parent="HBMain/ControlInfoColumn"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="UICharacterItemSlot" type="Control" parent="HBMain/ControlInfoColumn"]
+margin_right = 40.0
+margin_bottom = 40.0
